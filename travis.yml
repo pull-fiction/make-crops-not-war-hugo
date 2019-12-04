@@ -1,0 +1,34 @@
+language: python
+
+env:
+  global:
+  - USER="AEEooTO"
+  - EMAIL="deploy@travis-ci.org"
+  - DEPLOYMENT_USER="traviscibot"
+  - REPO="pindery"
+  - BRANCH="gh-pages"
+  - FILES="./public/*"
+  - GH_REPO="github.com/${USER}/${REPO}.git"
+  - HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.deb"
+
+install:
+    - wget ${HUGO_URL} # Download Hugo package
+    - sudo dpkg -i hugo*.deb # Install Hugo
+    - pip install Pygments
+
+script:
+    - hugo -s ./ # Generate the website
+
+after_success:
+  - git clone git://${GH_REPO}
+  - cd ${REPO}
+  - git checkout ${BRANCH}
+  - rm -rf `ls | grep -v 'md$' | grep -v '.git' | grep -v 'CNAME' | grep -v doc`
+  - cp -f -r ../${FILES} ./
+  - ls
+  - git remote
+  - git config user.email ${EMAIL}
+  - git config user.name ${DEPLOYMENT_USER}
+  - git add .
+  - git commit -m 'Update website'
+  - git push "https://${GITHUB_TOKEN}@${GH_REPO}" ${BRANCH}
