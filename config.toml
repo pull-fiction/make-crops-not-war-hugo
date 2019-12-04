@@ -1,7 +1,7 @@
 # Site settings
-baseurl = "https://www.example.com"
+baseurl = "https://pull-fiction.github.io/make-crops-not-war/"
 languageCode = "en-us"
-title = "Highlights"
+title = "Make Crops, not War!"
 theme = "hugo-highlights-theme"
 
 # Enter your tracking code to enable Google analytics
@@ -16,8 +16,8 @@ googleAnalytics = ""
 
   # To provide more meta data for search engings feel free to add a few informations.
   # This lines will be inserted as meta tags.
-  name = "Your Name"
-  description = "Your Description"
+  name = "Pull Fiction"
+  description = "What's the impact of war on agriculture? We are investigating it as project for the ADA course taught at EPFL."
 
   # For a static site it's not possible to provide a contact form. The contact form uses
   # www.formspree.io as a proxy. The form makes a Post request to their servers to send an email
@@ -30,7 +30,7 @@ googleAnalytics = ""
   # - send a dummy email to yourself to confirm your account
   # - click the confirmation link in the email from www.formspree.io
   # - That's all. Enjoy mailing!
-  email = "your@mail.com"
+  email = ""
 
   # If this param is set to true, every section gets an own background image (located at static/images)
   # to change the image you could use the param picture on every section.
@@ -40,9 +40,9 @@ googleAnalytics = ""
   # hero Section
   [params.hero]
     type = "hero"
-    title = "Highlights"
-    description = "a fun litte { responsive } single Pager by [HTML5UP](//html5up.net)"
-    buttontext = "begin"
+    title = "Make Crops, not War!"
+    description = "How war affects agricultural production."
+    buttontext = "Find out more."
 
   # about section
   [[params.block]]
@@ -100,17 +100,17 @@ googleAnalytics = ""
 #    picture = "pic04.jpg"
 
   # contact form
-  [[params.block]]
-    id = "contact"
-    type = "contact"
-    title = "Get in Touch"
-    picture = "pic05.jpg"
+#   [[params.block]]
+#     id = "contact"
+#     type = "contact"
+#     title = "Get in Touch"
+#     picture = "pic05.jpg"
 
-    [params.block.form]
-      name = "Name"
-      email = "Your Email"
-      message = "Your Message"
-      buttontext = "send message"
+#     [params.block.form]
+#       name = "Name"
+#       email = "Your Email"
+#       message = "Your Message"
+#       buttontext = "send message"
 
   # footer section
   # this section includes last block and social icons
@@ -118,40 +118,40 @@ googleAnalytics = ""
   [params.footer]
     enable = true
 
-    # social icons
-    [params.footer.social_list]
-      enable = true
+    # # social icons
+    # [params.footer.social_list]
+    #   enable = true
 
-      [[params.footer.social]]
-        title = "Twitter"
-        icon = "fa-twitter"
-        link = "#"
+    #   [[params.footer.social]]
+    #     title = "Twitter"
+    #     icon = "fa-twitter"
+    #     link = "#"
 
-      [[params.footer.social]]
-        title = "Facebook"
-        icon = "fa-facebook"
-        link = "#"
+    #   [[params.footer.social]]
+    #     title = "Facebook"
+    #     icon = "fa-facebook"
+    #     link = "#"
 
-      [[params.footer.social]]
-        title = "Instagramm"
-        icon = "fa-instagram"
-        link = "#"
+    #   [[params.footer.social]]
+    #     title = "Instagramm"
+    #     icon = "fa-instagram"
+    #     link = "#"
 
-      [[params.footer.social]]
-        title = "Dribbble"
-        icon = "fa-dribbble"
-        link = "#"
+    #   [[params.footer.social]]
+    #     title = "Dribbble"
+    #     icon = "fa-dribbble"
+    #     link = "#"
 
-      [[params.footer.social]]
-        title = "Email"
-        icon = "fa-envelope"
-        link = "#"
+    #   [[params.footer.social]]
+    #     title = "Email"
+    #     icon = "fa-envelope"
+    #     link = "#"
 
     # copyright
     #[params.footer.copyright.notice]
 
       [[params.footer.copyright.notice]]
-        text = "© Untitled"
+        text = ""
 
       [[params.footer.copyright.notice]]
         text = "Design: [HTML5UP](//html5up.net)"
