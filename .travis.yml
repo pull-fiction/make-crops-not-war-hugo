@@ -2,19 +2,16 @@ language: python
 
 env:
   global:
-  - USER="AEEooTO"
+  - USER="pull-fiction"
   - EMAIL="deploy@travis-ci.org"
   - DEPLOYMENT_USER="traviscibot"
-  - REPO="pindery"
+  - REPO="make-crops-not-war"
   - BRANCH="gh-pages"
   - FILES="./public/*"
   - GH_REPO="github.com/${USER}/${REPO}.git"
-  - HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.deb"
 
 install:
-    - wget ${HUGO_URL} # Download Hugo package
-    - sudo dpkg -i hugo*.deb # Install Hugo
-    - pip install Pygments
+    - sudo snap install hugo
 
 script:
     - hugo -s ./ # Generate the website
